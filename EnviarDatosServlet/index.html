@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="estilos.css" type="text/css" rel="stylesheet"/> 
+	<meta charset="ISO-8859-1">
+	<title>Formulario agendamiento citas</title>
+
+	<style>
+	label{
+		font-weight: bold;
+	}
+	.required:after{
+		content: "*";
+		color: red;
+	}
+	</style>
+	
+</head>
+<body>
+	
+	<h1 class="titulo">Agendamiento de citas</h1>
+	<div class="formulario">
+	<h3 class="subtitulo">Para solicitar una cita diligencia el siguiente formulario que sigue a continuación. Los campos marcados con (*) son obligatorios para procesar su solicitud.</h3>
+	<br>
+	<form action = "MostrarDatos" method = "get">
+	<section id="datos-personales">
+		<div class="nombres">
+			<label  for="primer_nombre" class= "required">Primer Nombre:</label>
+			<input type="text" id= "primer_nombre" name="primer_nombre" required/>
+
+			<label  for="segundo_nombre">Segundo Nombre:</label>
+			<input type="text" id= "segundo_nombre" name="segundo_nombre"/>
+		</div>	
+		<br>
+		<div class="apellidos">
+			<label  for="primer_apellido" class= "required">Primer Apellido:</label>
+			<input type="text" id= "primer_apellido" name="primer_apellido" required/>
+
+			<label  for="segundo_apellido">Segundo Apellido:</label>
+			<input type="text" id= "segundo_apellido" name="segundo_apellido"/>
+		</div>
+	</section>
+		<br>
+	<section id="informacionCita">
+		<div class="tipo_de_cita">
+			<label  for="tipo_de_cita">¿Qué tipo de cita desea agendar?</label>
+			<select id="tipo_de_cita" name="tipo_de_cita">
+				<option value="opcion1">Seleccione una opción</option>
+  				<option value="presencial">Presencial</option>
+  				<option value="virtual">Virtual</option>
+			</select>
+			<br>
+			<label  for="opcion_busqueda">¿Cómo desea completar la busqueda?</label>
+			<select id="opcion_busqueda" name="opcion_busqueda" required>
+				<option value="(ninguna)">Seleccione una opción</option>
+				<option value="por medico">Por médico</option>
+  				<option value="por especialidad">Por especialidad</option>
+  				<option value="por procedimiento">Por procedimiento</option>
+  				<option value="varias citas">Varias citas</option>
+			</select>
+		</div>
+		</section>
+		<br>
+		<section id="seleccionarFechaCita">
+		<h3 class="pregunta1">¿Para cuándo desea la cita?</h3>
+			<div class="opciones">
+				<label for="opcion1">Antes posible</label>
+				<input type="radio" id="opcion1" name="antes_posibe">
+				<label for="opcion2">Para una fecha específica</label>
+				<input type="radio" id="opcion2" name="Para_una_fecha_específica">
+			</div>
+			<br>
+			<h3 class="pregunta2">Elige una fecha</h3>
+			<div class="fecha">
+				<input type = "date" id="dia/mes/año" name = "fecha" required/>
+			</div>
+			<br>
+			<h2 class="subtitulo2">Filtros opcionales </h2>
+			<h3 class="sub">Días de la semana</h3>
+			
+			<div class="dias">
+				<label for="lunes" class="boton-semana">Lun</label>
+				<input type="radio" id="lunes" name="dia_semana">
+				<label for="martes" class="boton-semana">Mar</label>
+				<input type="radio" id="martes" name="dia_semana">
+				<label for="miercoles" class="boton-semana">Mie</label>
+				<input type="radio" id="miercoles" name="dia_semana">
+				<label for="jueves" class="boton-semana">Jue</label>
+				<input type="radio" id="jueves" name="dia_semana">
+				<label for="viernes" class="boton-semana">Vie</label>
+				<input type="radio" id="viernes" name="dia_semana">
+				<label for="sabado" class="boton-semana">Sab</label>
+				<input type="radio" id="sabado" name="dia_semana">
+				<label for="domingo" class="boton-semana">Dom</label>
+				<input type="radio" id="domingo" name="dia_semana"> 	
+			</div>
+		</section>
+		<br>
+		<section id="horaCita">
+			<div class="hora">
+				<label  for="horaInicio">Rango de horario</label>
+				<select id="horaInicio" name="horaInicio">
+					<option value="-"> - </option>
+					<option value="12:00Am">12:00AM</option>
+					<option value="01:00AM">01:00AM</option>
+					<option value="02:00AM">02:00AM</option>
+					<option value="03:00AM">03:00AM</option>
+					<option value="04:00AM">04:00AM</option>
+					<option value="05:00AM">05:00AM</option>
+					<option value="06:00AM">06:00AM</option>
+					<option value="07:00AM">07:00AM</option>
+					<option value="08:00AM">08:00AM</option>
+					<option value="09:00AM">09:00AM</option>
+					<option value="10:00AM">10:00AM</option>
+					<option value="11:00AM">11:00AM</option>
+					<option value="12:00PM">12:00PM</option>
+					<option value="01:00PM">01:00PM</option>
+					<option value="02:00PM">02:00PM</option>
+					<option value="03:00PM">03:00PM</option>
+					<option value="04:00PM">04:00PM</option>
+					<option value="05:00PM">05:00PM</option>
+					<option value="07:00PM">07:00PM</option>
+					<option value="08:00PM">08:00PM</option>
+					<option value="09:00PM">09:00PM</option>
+					<option value="10:00PM">10:00PM</option>
+					<option value="11:00PM">11:00PM</option>
+				</select>
+			-
+				<label  for="horaFinal">Rango de horario</label>
+				<select id="horaFinal" name="horaFinal">
+					<option value="-"> - </option>
+					<option value="12:00Am">12:00AM</option>
+					<option value="01:00AM">01:00AM</option>
+					<option value="02:00AM">02:00AM</option>
+					<option value="03:00AM">03:00AM</option>
+					<option value="04:00AM">04:00AM</option>
+					<option value="05:00AM">05:00AM</option>
+					<option value="06:00AM">06:00AM</option>
+					<option value="07:00AM">07:00AM</option>
+					<option value="08:00AM">08:00AM</option>
+					<option value="09:00AM">09:00AM</option>
+					<option value="10:00AM">10:00AM</option>
+					<option value="11:00AM">11:00AM</option>
+					<option value="12:00PM">12:00PM</option>
+					<option value="01:00PM">01:00PM</option>
+					<option value="02:00PM">02:00PM</option>
+					<option value="03:00PM">03:00PM</option>
+					<option value="04:00PM">04:00PM</option>
+					<option value="05:00PM">05:00PM</option>
+					<option value="07:00PM">07:00PM</option>
+					<option value="08:00PM">08:00PM</option>
+					<option value="09:00PM">09:00PM</option>
+					<option value="10:00PM">10:00PM</option>
+					<option value="11:00PM">11:00PM</option>
+				</select>
+			</div>
+		</section>
+		<br><br>
+		<div class="botones">
+			<input type="submit" value="enviar"/><br><br>
+		</div>
+	</form>
+	</div>
+		
+	<script src="js/functions.js"></script>
+</body>
+</html>

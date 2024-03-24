@@ -1,0 +1,117 @@
+@charset "ISO-8859-1";
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url(./img/lupitalogin-removebg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 458px;
+}
+   
+.formulario{
+	background-color: rgba(0,128,255,0.5);
+	margin: 22px 158px 18px 119px;
+	
+}
+.titulo{
+	color:#008DDA;
+    font-size: 70px;
+    margin: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+}
+
+.subtitulo{
+	 font-size: 12px;
+	 display: flex;
+     justify-content: center;
+}
+.nombres{
+	display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 12px;
+    justify-content: center;
+}
+.apellidos{
+	display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.tipo_de_cita{
+	font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pregunta1{
+  	font-size: 12px;
+	 display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+}
+
+.opciones{
+	font-size: 12px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pregunta2{
+  	font-size: 12px;
+	 display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+}
+.fecha{
+	font-size: 12px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.subtitulo2{
+	display: flex;
+    justify-content: center;
+    font-size: 26px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.sub{
+ 	font-size: 12px;
+	 display: flex;
+     justify-content: center;
+     color:black;
+}
+
+.dias{
+	font-size: 12px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hora{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+}
+.botones{
+	display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: white;
+}
